@@ -56,7 +56,7 @@ public class Day7 implements Part {
         String file = "src/main/resources/advent_of_code_7.txt";
         List<String> puzzle = readPuzzle(file);
         List<String> operators = List.of("+", "*");
-        int count = 0;
+        long count = 0;
 
         for (String line : puzzle) {
             var split = line.split(": ");
@@ -88,11 +88,10 @@ public class Day7 implements Part {
 
             for (String combinaison : trueComb) {
                 long compute = getCompute(combinaison);
-                System.out.println(compute);
+                //System.out.println(compute);
 
                 if (compute == result) {
                     count += result;
-                    System.out.println("###################################");
                     break;
                 }
             }
